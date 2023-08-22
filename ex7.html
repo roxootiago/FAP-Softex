@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="result"></div>
+  <script>
+
+    const dataAtual = new Date();
+    const anoAtual = dataAtual.getFullYear();
+    let nome;
+    let verdadeiro = true;
+
+    while (true) {
+        try {
+        nome = window.prompt('Digite o seu nome:')
+        if (nome.length == 0) {
+          throw new Error('Error: Digite algo no campo nome')
+        } else {
+          break
+        }
+      } catch (error) {
+        alert(error.message)
+      }
+
+    }
+    while (verdadeiro == true) {
+      try {
+        let anoNasc = window.prompt('Digite o ano em que nasceu:')
+        if (anoNasc >= 1922 && anoNasc <= 2023) {
+          document.getElementById('result').innerHTML = `${nome} tem ${anoAtual - anoNasc} anos`
+          verdadeiro = false
+        } else if (isNaN(anoNasc)) {
+          throw new Error('Aceitamos apenas números')
+        }
+        else if (anoNasc.length == 0) {
+          throw new Error('Error: Digite algo no campo ano de nascimento')
+        }
+
+        else {
+          throw new Error('Digite um ano entre 1922 e 2023')
+        }
+      }
+      catch (error) {
+        alert(error.message)
+
+      }
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
