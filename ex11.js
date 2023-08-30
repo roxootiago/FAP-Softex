@@ -1,18 +1,10 @@
-let minhaFila =  [3, 7, 9, 1, 0]
-let novaFila
+let minhaFila = [3, 7, 9, 1, 0];
+let novaFila;
 
-function remover () {
-    if (minhaFila.lentgh === 0) {
-        return null
-    }
-    return minhaFila.shift()
+function remover() {
+ for (i = -1;i < minhaFila.length;i++){
+    console.log(`ordem de remoção: ${minhaFila.shift()}`)
+ }
 }
 
-console.log(minhaFila)
 remover()
-remover()
-remover()
-console.log(minhaFila)
-remover()
-remover()
-console.log(remover())
