@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <div id="name"></div>
+    <div id="age"></div>
+    <div id="favorite-colors"></div>
+
+    <script>
+        let name = []
+        let age = []
+        let color = []
+        let nameInput
+        let ageInput
+        let colorInput
+
+
+        for (let i = 0; i <= 2; i++) {
+            nameInput = window.prompt('Digite seu nome: ')
+            name.push(nameInput)
+
+            ageInput = window.prompt('Digite sua idade: ')
+            age.push(ageInput)
+
+            colorInput = window.prompt('Digite sua cor favorita: ')
+            color.push(colorInput)
+        }
+
+        document.getElementById('name').innerHTML = name
+        document.getElementById('age').innerHTML = age
+        document.getElementById('favorite-colors').innerHTML = color
+    </script>
+</body>
+
+</html>
