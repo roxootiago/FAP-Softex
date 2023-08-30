@@ -11,6 +11,8 @@
     <div id="name"></div>
     <div id="age"></div>
     <div id="favorite-colors"></div>
+    <div id="favorite-colors-modified"></div>
+    <div id="age-modified"></div>
 
     <script>
         let name = []
@@ -21,7 +23,7 @@
         let colorInput
 
 
-        for (let i = 0; i <= 10; i++) {
+        for (let i = 0; i <= 3; i++) {
             nameInput = window.prompt('Digite seu nome: ')
             name.push(nameInput)
 
@@ -35,6 +37,12 @@
         document.getElementById('name').innerHTML = name
         document.getElementById('age').innerHTML = age
         document.getElementById('favorite-colors').innerHTML = color
+
+        age[2] = 26
+        color[3] = 'preto'
+
+         document.getElementById('age-modified').innerHTML = `lista de idade modificada: ${age}`
+            document.getElementById('favorite-colors-modified').innerHTML = `lista de cores favoritas modificada: ${color}`
     </script>
 </body>
 
