@@ -1,30 +1,33 @@
-let booleano;
-let bigInteger;
-let string1;
-let symbol1;
+<<<<<<< HEAD
 
-console.log(`Boolean: ${booleano}
-BigInt: ${bigInteger}
-String: ${string1}
-Symbol: ${symbol1}\n`);
+=======
+class Pessoa {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  info() {
+    return `meu nome é ${this.name} e tenho ${this.age} anos`;
+  }
+}
 
-booleano = null;
-bigInteger = null;
-string1 = null;
-symbol1 = null;
+class Filho extends Pessoa {
+    constructor(name,nameSon,age){
+        super(name)
+        this.nameSon = nameSon
+        this.age = age
+    }
 
-console.log(`Boolean: ${booleano}
-BigInt: ${bigInteger}
-String: ${string1}
-Symbol: ${symbol1}\n`);
+    info() {
+        return `meu nome é ${this.nameSon} e tenho ${this.age} anos e sou filho de ${this.name}`;
+    }
+}
 
-booleano = true;
-bigInteger = 9999999999999999;
-string1 = "hello world";
-symbol1 = Symbol("index");
-const meuObjeto = { [symbol1]: "Teste Symbol" };
 
-console.log(`Boolean: ${booleano}
-BigInt: ${bigInteger}
-String: ${string1}`);
-console.log(meuObjeto);
+people = new Pessoa ('Maria',50)
+console.log(people)
+console.log(people.info())
+
+filho = new Filho ("Maria",'Tiago',20)
+console.log(filho.info())
+>>>>>>> d7aa0e91bf22cbbdde236739b2890cbfed808bbf
