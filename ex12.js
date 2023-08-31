@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 class Pessoa {
   constructor(name, age) {
     this.name = name;
@@ -30,4 +27,4 @@ console.log(people.info())
 
 filho = new Filho ("Maria",'Tiago',20)
 console.log(filho.info())
->>>>>>> d7aa0e91bf22cbbdde236739b2890cbfed808bbf
+
