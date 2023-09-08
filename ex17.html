@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<div id="calculadora"></div>
+<div id="resto"></div>
+
+<body>
+    <script>
+        let num1 = parseFloat(window.prompt('Digite o primeiro número'))
+        let operc = window.prompt('Insira a operação que deseja fazer')
+        let num2 = parseFloat(window.prompt('Digite o segundo número'))
+        let result
+
+        switch (operc) {
+            case "+":
+                result = `${num1.toFixed(2)} + ${num2.toFixed(2)} = ${(num1 + num2).toFixed(2)}`
+                break;
+
+            case "-":
+            result = `${num1.toFixed(2)} - ${num2.toFixed(2)} = ${(num1 - num2).toFixed(2)}`
+                break;
+
+            case "*":
+                result = `${num1.toFixed(2)} x ${num2.toFixed(2)} = ${(num1 * num2).toFixed(2)}`
+                break;
+
+            case "/":
+                result = `${num1.toFixed(2)} ÷ ${num2.toFixed(2)} = ${(num1 / num2).toFixed(2)}`
+                document.getElementById('Resto').innerHTML = `resto: ${num1.toFixed(2) % num2.toFixed(2)}`
+                break;            
+            
+        }
+
+        document.getElementById('calculadora').innerHTML = result
+    </script>
+</body>
+
+</html>
