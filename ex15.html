@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <div id="nome"></div>
+    <div id="salario"></div>
+    <div id="idade"></div>
+    <div id="possui-diploma"></div>
+</head>
+<body>
+    <script>
+        let nome = String('Tiago')
+        let salario = parseFloat(3490.567).toFixed(2)
+        let idade = parseInt(20)
+        let diploma = Boolean(true)
+
+        
+
+        
+        document.getElementById('nome').innerHTML = `Nome:  ${nome}`
+        document.getElementById('salario').innerHTML = `Salário:  R$${salario}`
+        document.getElementById('idade').innerHTML = `Idade:  ${idade}`
+        document.getElementById('possui-diploma').innerHTML = `Diploma:  ${diploma == true ? `possui`:`não possui`}`
+    </script>
+</body>
+</html>
