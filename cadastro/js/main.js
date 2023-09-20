@@ -1,22 +1,33 @@
 class Cliente {
-    constructor () {
-        this.nome = ""
-    }
+  #nome = "";
+  #sobrenome = "";
+  #email = "";
+  #dataNascimento = "";
+  #sexo = "";
 
-    get gNome () {
-        return this.nome
-    }
+  constructor(nome) {
+    this.nome = nome;
+    this.sobrenome = this.sobrenome;
+    this.email = this.email;
+  }
 
-    set sNome (value) {
-        this.nome = value
-    }
+  get gNome() {
+    return this.nome;
+  }
+
+  set sNome(value) {
+    this.nome = value;
+  }
 }
 
-function Cadastrar () {
-    let nomeCliente = document.getElementById('nameId')
+let nomeCliente = document.getElementById("fname");
+let cliente1 = new Cliente(nomeCliente);
+function Cadastrar() {
+  cliente1.nome = nomeCliente.value;
 
-const cliente1 = new Cliente()
-cliente1 = new Cliente()
-cliente1.nome = nomeCliente.value
-window.alert(`Cliente: ${cliente1.nome} cadastrado com sucesso`)
+  if (cliente1.nome.length === 0) {
+    window.alert("Digite algo no campo nome");
+  } else {
+    alert(`Cliente ${nomeCliente.value} cadastrado com sucesso`);
+  }
 }

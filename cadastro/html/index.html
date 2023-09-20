@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <h1>Bem-vindo ao nosso portal!</h1>
 
+   <form action="">
+    <fieldset class="container">
+        <legend>Informações pessoais</legend>
+        <label for="fname">Nome:</label>
+        <input type="text" id="fname" name="nameId" placeholder="Digite seu nome aqui" required>
+        <br><br>
+        
+        <label for="lname">Sobrenome: </label>
+        <input type="text" id="lname" name="lname" placeholder="Digite seu sobrenome aqui"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Digite seu email aqui"><br><br>
+
+        <label for="dataNasc">Data de nascimento: </label>
+        <input type="date" name="dataNasc"><br><br>
+
+        <label for="sexo">Sexo: </label><br>
+        <input type="radio" id="sexo" name="sexo" value="Masculino">
+        <label for="femin">Masculino</label><br>
+        <input type="radio" id="sexo" name="sexo" value="Feminino">
+        <label for="masc">Feminino</label><br><br>
+
+        <input type="submit" name="enviar" id="submit-btn" onclick="Cadastrar()" value="Cadastrar">
+    </fieldset>
+   </form>
+      
     <script src="../js/main.js"></script>
 </body>
 </html>
