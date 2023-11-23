@@ -1,0 +1,19 @@
+{
+  "name": "testando",
+  "version": "1.0.0",
+  "description": "estou testando o node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roxootiago/aprendendo-node.git"
+  },
+  "author": "Tiago Roxo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roxootiago/aprendendo-node/issues"
+  },
+  "homepage": "https://github.com/roxootiago/aprendendo-node#readme"
+}

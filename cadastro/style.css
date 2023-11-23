@@ -1,0 +1,11 @@
+/* Esquema de Cores Padrão */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Esquema de Cores para Daltonismo - Protanopia (vermelho-verde) */
+body.protanopia {
+  background-color: #f0f0f0; /* Esquema de cores específico para protanopia */
+  color: #0000ff; /* Cor alternativa legível para protanopia */
+}
