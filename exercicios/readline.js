@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
@@ -6,4 +7,14 @@ const readline = require('readline').createInterface({
   readline.question('Quem é você?', name => {
     console.log(`Hey there ${name}!`);
     readline.close();
+=======
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+  readline.question('Quem é você?', name => {
+    console.log(`Hey there ${name}!`);
+    readline.close();
+>>>>>>> origin/main
   });

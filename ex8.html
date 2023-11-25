@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1031/1031962.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <img src="" id="image-option" alt="" width="15%">
+    <p id="desc-candidato"></p>
+    <p id="vencedor"></p>
+    <script>
+        const candidatos = {
+            candidato_X: 889,
+            candidato_Y: 847,
+            candidato_Z: 515,
+            branco: 0
+        }
+
+        const errors = {
+            textError: 1,
+            emptyError: 2
+        }
+        let res;
+        let count1 = 0, count2 = 0, count3 = 0;
+        let voto;
+        let opcao = 'N';
+
+        function validarVoto(voto) {
+
+            if (isNaN(voto)) {
+                return errors.textError
+            }
+            else if (voto.length == 0) {
+                return errors.emptyError
+            } else {
+                return 0
+            }
+        }
+
+        function urna() {
+
+            while (opcao === 'N') {
+                voto = window.prompt('Digite sua opção de voto ou  0  para nulo:')
+                let res = validarVoto(voto)
+
+                if (res == errors.textError) {
+                    window.alert('Parâmetro inválido: digite o numero do candidato!')
+                    urna()
+                    break
+                } else if (res == errors.emptyError) {
+                    window.alert('Digite algo no campo de voto')
+                    urna()
+                    break
+                }
+                if (voto == candidatos.candidato_X) {
+                    res = document.addEventListener("DOMContentLoaded", function () {
+                        document.getElementById('image-option').src = "https://i.pinimg.com/originals/28/34/a8/2834a898f3dc07a098b84c7f97400fc2.gif"
+                        document.getElementById('desc-candidato').innerHTML = `Você votou em Alanzoka`
+                    })
+                    count1++
+                }
+                else if (voto == candidatos.candidato_Y) {
+                    res = document.addEventListener("DOMContentLoaded", function () {
+                        document.getElementById('image-option').src = "https://media.tenor.com/j-67rcVWuXQAAAAC/jukes-jukera.gif"
+                        document.getElementById('desc-candidato').innerHTML = `Você votou em Jukera`
+                    })
+                    count2++
+                }
+                else if (voto == candidatos.candidato_Z) {
+                    res = document.addEventListener("DOMContentLoaded", function () {
+                        document.getElementById('image-option').src = "https://i.pinimg.com/originals/c7/8e/66/c78e665b2a3da5e78f2a052ddb674694.gif"
+                        document.getElementById('desc-candidato').innerHTML = `Você votou em Casimiro`
+                    })
+                    count3++
+                }
+                else if (voto == 0 || !(voto in candidatos)) {
+                    window.confirm(`Voto nulo registrado com sucesso!`)
+                    res = document.getElementById('desc-candidato').innerHTML = `Voto nulo`
+                }
+
+                opcao = window.prompt(`Deseja finalizar o voto? 
+            (S) Sim 
+            (N) Não`).toUpperCase()
+                if (opcao == "N") {
+                    urna()
+                } else {
+                    opcao = 'S'
+                }
+            }
+
+            let vencedor = 'Nenhum';
+            if (count1 > count2 && count1 > count3) {
+                vencedor = 'Alanzoka';
+            } else if (count2 > count1 && count2 > count3) {
+                vencedor = 'Jukera';
+            } else if (count3 > count1 && count3 > count2) {
+                vencedor = 'Casimiro';
+            }
+
+            document.getElementById('vencedor').innerHTML = `Vencedor: ${vencedor}`;
+
+
+        }
+
+
+        urna()
+       
+
+
+
+    </script>
+</body>
+
+</html>
