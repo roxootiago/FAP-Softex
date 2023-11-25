@@ -1,42 +1,37 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
+    <title>Agenda</title>
 </head>
 <body>
-    <h2>Demo</h2>
-    <img src="" id="img" alt="">
-        <button type="button" onclick="change()">Click para gerar um meme</button>
-
+    <h1>To do list</h1>
+    <div >
+<p id="table"></p>
+<p id="qntdDias"></p>
+    </div>
     <script>
-        function change() {
-            document.getElementById('img').src = "https://i.pinimg.com/564x/85/89/76/8589764b5c6fc83c2e42c4f4443a21ca.jpg"
+        let qntdTarefa = window.prompt('Quantas tarefas deseja adicinar: ');
+        let tarefa;
+        let arrayTarefa = []
+        let vezesNaSemana = []
+        let qntdDias;
 
+        for (i = 0; i < qntdTarefa;i++) {
+            tarefa = window.prompt('Digite a tarefa:')
+            arrayTarefa.push(tarefa)
         }
+
+        for (i =  0; i < qntdTarefa; i++) {
+            qntdDias = window.prompt(`Digite quantas vezes na semana deseja ${arrayTarefa[i]}:`)
+            vezesNaSemana.push(qntdDias)
+        }
+
+        document.getElementById('table').innerHTML = arrayTarefa
+        document.getElementById('qntdDias').innerHTML = vezesNaSemana
+        
+        
     </script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
-</head>
-<body>
-    <h2>Demo</h2>
-    <img src="" id="img" alt="">
-        <button type="button" onclick="change()">Click para gerar um meme</button>
-
-    <script>
-        function change() {
-            document.getElementById('img').src = "https://i.pinimg.com/564x/85/89/76/8589764b5c6fc83c2e42c4f4443a21ca.jpg"
-
-        }
-    </script>
-</body>
->>>>>>> origin/main
 </html>
