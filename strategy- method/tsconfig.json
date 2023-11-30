@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "ES2019" ,/* Versão ECMASCRIPT que será compilado */
+        "module": "CommonJS",
+        "lib": ["ESNext","DOM"], /* libs que serão usadas */
+        "outDir": "./dist", /* arquivo que será compilado */
+        "rootDir": "./src", /* raiz do projeto */
+        "removeComments": true,
+        "noEmitOnError": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    }, "include": [
+        "./src"
+    ]
+}
